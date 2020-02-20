@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>PANDORA </title>
+</head>
+
+<body>
+    <section id="navbar">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img src="images/pandora-logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">RINGS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CHARMS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">NECKLACE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">BRECELET</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">COLLECTION</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACT US</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                        </li>
+
+
+
+                    </ul>
+
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-200px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+
+
+
+
+    <div class="hero">
+    </div>
+
+
+    <div class="jewelry">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="image-text">
+                        <img src="images/rings.jpg" alt="" width="200" height="200">
+
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-outline-secondary">RINGS</button>
+                </div>
+                <div class="col-lg-3">
+                    <div class="image-text">
+
+                        <img src="images/necklace1000x1000.jpg" alt="" width="200" height="200">
+
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-outline-secondary"> NECKLACE</button>
+
+                </div>
+                <div class="col-lg-3">
+                    <div class="image-text">
+
+                        <img src="images/brecelet.jpg" alt="" width="200" height="200">
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-outline-secondary">BRECELET</button>
+
+                </div>
+                <div class="col-lg-3">
+                    <div class="image-text">
+                        <img src="images/charms.jpg" alt="" width="200" height="200">
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-outline-secondary">CHARMS</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="collection">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+
+                    <strong>
+                        <h1>COLLECTION</h1>
+                    </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+
+        <div class="w3-content w3-section" style="max-width:500px">
+
+            <img class="mySlides w3-animate-fading" src="images/rose.jpg" width="500" height="500">
+            <img class="mySlides w3-animate-fading" src="images/silver.jpg" width="1000" height="1000">
+            <img class="mySlides w3-animate-fading" src="images/disney.jpg" width="500" height="500">
+            <img class="mySlides w3-animate-fading" src="images/aladin.jpg" width="500" height="500">
+        </div>
+    </div>
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 9000);
+        }
+    </script>
+
+
+    <div class="specials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+
+                    <div class="card">
+                        <img src="images/AERRINGS.jpg" alt="Denim Jeans" width="750" height="750">
+                        <h1>Hoop Earrings</h1>
+                        <p class="price">$70</p>
+                        <p>Originale Pandora Shine Reluciente Pulseras Conjunto In Offerta</p>
+                        <p> <button type="button" class="btn btn-outline-secondary">ADD TO CART</button></p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+
+                    <div class="card">
+                        <img src="images/bracciale-pandora-classic-590524cz-1.jpg" alt="Denim Jeans" width="750"
+                            height="750">
+                        <h1>Tennis Bracelet</h1>
+                        <p class="price">$80</p>
+                        <p> Pandora Sparkling Slider Tennis Bracelet</p>
+                        <p> <button type="button" class="btn btn-outline-secondary">ADD TO CART</button></p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+
+                    <div class="card">
+                        <img src="images/GOLDI.jpg" alt="Denim Jeans" width="750" height="750">
+                        <h1> Charm Bracelet </h1>
+                        <p class="price">$120</p>
+                        <p>Moments Padlock beautiful gold Charm Bracelet. </p>
+                        <p> <button type="button" class="btn btn-outline-secondary">ADD TO CART</button></p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+
+                    <div class="card">
+                        <img src="images/Brose.png" alt="Denim Jeans" width="750" height="750">
+                        <h1>opan bracelet</h1>
+                        <p class="price">$90</p>
+                        <p>PANDORA Rose version of our popular open bangle</p>
+                        <p> <button type="button" class="btn btn-outline-secondary">ADD TO CART</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+
+    <div class="newsletter">
+        <div class="container">
+            <h2>NEWS LETTER</h2>
+            <form action="/action_page.php">
+                <div class="form-group">
+                    <label for="email">EMAIL:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                    </label>
+                </div>
+                <button type="button" class="btn btn-outline-danger">submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="story">
+        <div class="container">
+            <div class="row">
+                <div class="women_story col-lg-4">
+                    <img src="images/gift.jpg" alt="" width="350" height="350">
+                </div>
+                <div class="women_story col-lg-8">
+                    <h3>Tell Her Story With PANDORA</h3>
+                    <p>
+                        Every woman has her own story to tell. And she continues to add chapters to her personal tale
+                        throughout her life. <br> Memories are the precious jewels she’ll take with her throughout her
+                        journey. <br> The PANDORA collection is one-of-a-kind jewelry that celebrates sparkling moments
+                        she won’t want to forget. <br> Mountz Jewelers is proud to carry this collection of fine
+                        jewelry at every one of our locations — Camp Hill, Carlisle, and Harrisburg.
+                    </p>
+                    <p><h2>Buy a gift to someone you LOVE</h2></p>
+                    <button class="button"><span>BUY NOW </span></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contacts">
+        <div class="container">
+            <div class="row">
+
+                <div class="contact col-sm-12 col-lg-3">
+
+                    <h4>Explore</h4><br><br>
+                    <a class="contacts-links" href="#">Charms</a><br><br>
+                    <a class="contacts-links" href="#">Bracelets</a><br><br>
+                    <a class="contacts-links" href="#">Rings</a><br><br>
+                    <a class="contacts-links" href="#"> Necklaces & Pendants</a><br><br>
+                    <a class="contacts-links" href="#">Earrings</a><br><br>
+                    <a class="contacts-links" href="#">Gifts</a><br><br>
+                    <a class="contacts-links" href="#">Pandora Disney</a><br><br>
+                    <a class="contacts-links" href="#">Promotion & Offers</a><br><br>
+                </div>
+
+
+
+                <div class=" contact col-sm-12 col-lg-3">
+
+                    <h4>Service</h4><br><br>
+                    <a class="contacts-links" href="#">FAQs</a><br><br>
+                    <a class="contacts-links" href="#">Shipping</a><br><br>
+                    <a class="contacts-links" href="#">In Stor</a><br><br>
+                    <a class="contacts-links" href="#">Returns</a><br><br>
+                    <a class="contacts-links" href="#">Orders</a><br><br>
+                    <a class="contacts-links" href="#">Size Guide</a><br><br>
+                    <a class="contacts-links" href="#">Product & Care</a><br><br>
+                    <a class="contacts-links" href="#">Warranty</a><br><br>
+                    <a class="contacts-links" href="#">Contact Us</a><br><br>
+                </div>
+
+                <div class=" contact col-sm-12 col-lg-3">
+
+                    <h4>Manage</h4><br><br>
+                    <a class="contacts-links" href="#">Track My Order</a><br><br>
+                    <a class="contacts-links" href="#">My Orders</a><br><br>
+                    <a class="contacts-links" href="#">My Account</a><br><br>
+                    <a class="contacts-links" href="#">My Wishlist</a><br><br>
+                    <a class="contacts-links" href="#">Pandora Preferred Card</a><br><br>
+                    <a class="contacts-links" href="#">Gift Cards</a><br><br>
+
+                </div>
+
+                <div class=" contact col-sm-12 col-lg-3">
+
+                    <h4>About Us</h4><br><br>
+                    <a class="contacts-links" href="#">About Pandora</a><br><br>
+                    <a class="contacts-links" href="#">PANDORA Company</a><br><br>
+                    <a class="contacts-links" href="#">Store Locator</a><br><br>
+                    <a class="contacts-links" href="#">Store Locator</a><br><br>
+                    <a class="contacts-links" href="#">Careers</a><br><br>
+                    <a class="contacts-links" href="#">Terms and Conditions</a><br><br>
+                    <a class="contacts-links" href="#">California Supply Chains Act</a><br><br>
+                    <a class="contacts-links" href="#">Cookie Policy</a><br><br>
+                    <a class="contacts-links" href="#">Privacy Policy</a><br><br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
